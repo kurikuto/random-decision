@@ -1,0 +1,120 @@
+/* ResultPage.css - 選択結果表示画面のスタイル */
+
+.result-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.result-container {
+  max-width: 600px;
+  width: 100%;
+}
+
+.result-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.result-header h2 {
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.result-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  margin-bottom: 30px;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0 0 20px 0;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.result-content {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.result-content p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.result-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.result-actions button {
+  flex: 1;
+  padding: 15px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.again-button {
+  background-color: white;
+  color: #667eea;
+  border: 2px solid white;
+}
+
+.again-button:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.result-actions .back-button {
+  background-color: rgba(255,255,255,0.2);
+  color: white;
+  border: 2px solid white;
+}
+
+.result-actions .back-button:hover {
+  background-color: rgba(255,255,255,0.3);
+}
+
+@media (max-width: 600px) {
+  .result-card {
+    padding: 30px 20px;
+  }
+  
+  .result-title {
+    font-size: 2rem;
+  }
+  
+  .result-content p {
+    font-size: 1rem;
+  }
+}
